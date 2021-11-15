@@ -1,5 +1,18 @@
-body {
-    background-color: lightblue;
-  }
+* {                         /*added for all box elements v1.6*/
+  box-sizing: border-box;
+}
 
+body {
+    background-color: rgb(16, 168, 219);
+    font-family: 'VT323', monospace;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
   
+.written {
+  max-width: 800px;
+  margin-left: 15px;
+  display: inline; 
+  }

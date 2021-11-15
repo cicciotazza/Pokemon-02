@@ -10,7 +10,7 @@ Task02
 Task03
 *compare pokemoonList*
 *write name(height: x)*
-*write the tallest: Wow tha'ts big*
+*write the tallest: Wow that's big*
 *style a bit with CSS*
 *make it usable on Mobile*
 [x]

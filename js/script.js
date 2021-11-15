@@ -26,22 +26,23 @@ let pokemonList = [
     type: ['electric', 'steel']
 }
 ];
+ 
+alert("Click here to chek your Pokemon")                       //let's try the same result on HTML
+document.write("<p><h2>Welcome to Task 1.3</h2></p>");         //welcome message visible on the HTML file
 
-console.log("Welcome to Task 1.3");
 
-let exclamation =" - WOW that's big!"                //to avoid multiple identical texts
+
+let exclamation =" - WOW that's big!"                         //to avoid multiple identical texts
 let h1 ="'s height is "
 
-for (let i=0; i < pokemonList.length; i++){         //declare a value for "i" which will be minor of the list itself (4) and is incremented at steps of 1
-    if (pokemonList[i].height <1.1){       // condition created to have only one "Wow"
-       console.log(pokemonList[i].name + h1 + pokemonList[i].height);                       //action requested for this task
-    }else {                                                                                 //false/alternative
-        console.log(pokemonList[i].name + h1 + pokemonList[i].height + exclamation);        //same as if but with the exclamation added
+for (let i=0; i < pokemonList.length; i++){                                             //declare a value for "i" smaller than the list itself (4) and incremented at steps of 1 (++)
+    if (pokemonList[i].height <1.1){                                                    // condition created to have only one "Wow"
+       document.write(pokemonList[i].name + h1 + pokemonList[i].height + "<br>");                    //action requested for this task
+    }else {                                                                                          //false/alternative
+        document.write(pokemonList[i].name + h1 + pokemonList[i].height + exclamation + "<br>");     //same as "if" but with the exclamation added
     }
   };        
 
-                    // Task 1.3
-                    //ceate a loop to iterares the pokemonList 
-                    //write their name
-                    //string to write "name(height: x)"
-                    //conditional to check if the height is above a certain value, if yes writes "Wow, that's big" but make it only for one 
+
+                    //*Old version was with console.log instead of document.write*
+                
