@@ -30,8 +30,11 @@ let pokemonList = [
 alert("Click here to chek your Pokemon")                       //let's try the same result on HTML
 document.write("<p><h2>Welcome to Task 1.3</h2></p>");         //welcome message visible on the HTML file
 
+pokemonList.forEach(function(pokemon) {                         //used forEach() loop over the array
+    document.write(pokemon.name + ' is ' + pokemon.height + ' and its types are ' + pokemon.type + "<br>");
+  });
 
-
+/*
 let exclamation =" - WOW that's big!"                         //to avoid multiple identical texts
 let h1 ="'s height is "
 
@@ -43,6 +46,5 @@ for (let i=0; i < pokemonList.length; i++){                                     
     }
   };        
 
-
-                    //*Old version was with console.log instead of document.write*
+  The 1st Old version was with console.log instead of document.write*/
                 
