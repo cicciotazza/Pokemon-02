@@ -18,6 +18,7 @@
 
 **Task03**
 a) *forEach() function to be used instead of the for loop*
+b) *wrap pokemonList arrain in a IIFE, create a new PokemonRepository, return the function using getAll and add a single item to the pokemonList*
 [x]
 
 Pokemons list used
