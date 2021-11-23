@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+form {
+  display: flex;
+}
+
 body {
     background-color: rgb(16, 168, 219);
     font-family: 'VT323', monospace;
@@ -10,9 +14,59 @@ body {
     line-height: 1.5;
     text-align: center;
   }
-  
-.written {
-  max-width: 800px;
-  margin-left: 15px;
+
+  .page-header_item {
+    width: 10%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.div1 {                                                     /*parent class*/
+  max-width:700px;  
   display: inline; 
+  justify-content: center;
+  align-self: center;
+ }
+
+ .text2 {                                                   /*child class*/
+  display: inline; 
+  justify-content: center;
+  align-self: center;
+ }
+
+  .button-class {                                           /*buttons for the function*/
+    width: 70%;
+    height: 50%;
+    text-align:center;
+    justify-content: center;
+    align-self: center;
+    background: silver;
+    padding: 30px 30px;
+    font-size: 18px;
+    margin: 2px 2px;
+    transition-duration: 2s;
+    cursor: pointer;
+    background-color: rgb(238, 224, 224);
+    color: black;
+    border: 3px solid #3d3d3d;
+    border-radius: 6px;
+  }
+  
+  .pokemon-list{
+    list-style-type: none;
+  }
+
+  .footer {                                               /*added a simple footer to check how is the text when resizing*/
+    background-color: rgb(16, 168, 219);
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  button:hover {
+    background: #eff304;
   }
