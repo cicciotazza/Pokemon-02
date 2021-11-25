@@ -67,6 +67,13 @@ body {
     padding: 15px;
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
   button:hover {
     background: #eff304;
   }
+
+   
