@@ -1,4 +1,4 @@
-alert("WlV 1.7 - Click here to chek your Pokemon");
+alert("V 1.7 - Click here to check your Pokemon");
 
 let pokemonRepository = (function () {                              //IIFE starts function with an Array
     let pokemonList = [];
