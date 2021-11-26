@@ -1,8 +1,9 @@
-alert("V 1.7 - Click here to check your Pokemon");
+alert("V 1.8 - Click here to check your Pokemon");
 
 let pokemonRepository = (function () {                              //IIFE starts function with an Array
     let pokemonList = [];
     let apiUrl ='https://pokeapi.co/api/v2/pokemon/?limit=150';
+    let modalContainer = document.querySelector('#modal-container');
 
     function add(pokemon) {                                         //check whether or not the iem is a an objet
         if 
@@ -18,6 +19,7 @@ let pokemonRepository = (function () {                              //IIFE start
     function getAll() {                                             //Gives back pokemonList array
         return pokemonList;                                         
     }
+
     function addListItem(pokemon){          
         let pokemonList = document.querySelector(".pokemon-list");
         let listpokemon = document.createElement("li");
@@ -28,9 +30,9 @@ let pokemonRepository = (function () {                              //IIFE start
         pokemonList.appendChild(listpokemon);   
         button.addEventListener('click', function (event) {      //if the "click" happens it will report the specific Pokemon
             showDetails(pokemon);                             
-        });                                                   
+            });                                                   
         }                            
-        
+
         function loadList () {                                  //load details function 
             return fetch(apiUrl).then(function (response) {     //promise, fetch the API with the url above
                 return response.json();
@@ -41,7 +43,7 @@ let pokemonRepository = (function () {                              //IIFE start
                         detailsUrl: item.url 
                     };
                     add(pokemon);                               //comes from the function add(pokemon)
-                    console.log(pokemon);
+                    //console.log(pokemon);
                 });
             }).catch(function (e) {
                 console.error(e);
@@ -61,13 +63,61 @@ let pokemonRepository = (function () {                              //IIFE start
             });
         }
 
-        function showDetails(item) {
-            pokemonRepository.loadDetails(item).then(function() 
-            {
-                console.log(item);                                  //print a specific pokemon based on the funtion list
+        function showDetails(pokemon) {
+            loadDetails(pokemon).then(function  () {
+                showModal(pokemon);                                 //print a specific pokemon based on the funtion list
             });
         }    
-        
+
+        function showModal(pokemon){                                                //new Modal function
+            let modalContainer = document.querySelector('#modal-container');
+            let modal = document.createElement('div');
+           
+            modal.classList.add('modal');
+            let closeButtonElement = document.createElement('button');              //close Button
+            closeButtonElement.classList.add('modal-close');
+            closeButtonElement.innerText = 'X';
+            closeButtonElement.addEventListener('click', hideModal);
+            let titleElement = document.createElement('h1');                           //declare the name
+            titleElement.innerText = pokemon.name;
+            let contentElement = document.createElement('p');
+            contentElement.innerText = ('Height: ') + pokemon.height;
+            let imgElement = document.createElement('img');                            //declare the image
+            imgElement.src = pokemon.imageUrl;
+
+            modal.appendChild(closeButtonElement);
+            modal.appendChild(titleElement);
+            modal.appendChild(contentElement);
+
+            pokemon.types.forEach(item => {
+                let contentElement = document.createElement('p');
+                contentElement.innerText = ('Type: ') + item.type.name;
+                modal.appendChild(contentElement);
+            });
+
+            modal.appendChild(imgElement);
+            modalContainer.appendChild(modal);
+            modalContainer.classList.add('is-visible');                                 //show up Modal 
+            function hideModal() {
+              let modalContainer = document.querySelector('#modal-container');
+              modalContainer.classList.remove('is-visible');
+              }
+
+            window.addEventListener('keydown', (e) => {                                  //click ESC to escape               
+              let modalContainer = document.querySelector('#modal-container');
+              if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+                hideModal();
+              }
+            });
+
+            modalContainer.addEventListener('click', (e) => {               //activated if clicking inside the modal and closed if clicked on the overlay
+              let target = e.target;
+              if (target === modalContainer) {
+                hideModal();
+            }
+            });
+        }
+
         return {
             add: add,
             getAll: getAll,

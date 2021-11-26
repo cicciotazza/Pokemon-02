@@ -33,6 +33,16 @@ b) *wrap pokemonList arrain in a IIFE, create a new PokemonRepository, return th
   *run console.log for each Pokemon obkect passed as parameter*
   *add event listener*
 
+  **Task07**
+  *Promises*
+  *polyfills*
+  *console.log returns details on click*
+  [x]
+
+   **Task08**
+  *Modal and interaction*
+  [x]
+
 Pokemons list used
 [http](https://www.pokemon.com/us/pokedex/)
 [http](https://pokeapi.co/api/v2/pokemon)
