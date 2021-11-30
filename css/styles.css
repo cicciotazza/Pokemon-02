@@ -1,61 +1,130 @@
-@import url(https://fonts.googleapis.com/css2?family=Estonia&display:400,400); 
+* {                         /*added for all box elements v1.6*/
+  box-sizing: border-box;
+}
 
-/*url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);*/
+form {
+  display: flex;
+}
 
 body {
-  background: lightslategrey;
+    background-color: rgb(16, 168, 219);
+    font-family: 'VT323', monospace;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .page-header_item {
+    width: 10%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.div1 {                                                     /*parent class*/
+  max-width:700px;  
+  display: inline; 
+  justify-content: center;
+  align-self: center;
+ }
+
+ .text2 {                                                   /*child class*/
+  display: inline; 
+  justify-content: center;
+  align-self: center;
+ }
+
+  .button-class {                                           /*buttons for the function*/
+    width: 70%;
+    height: 50%;
+    text-align:center;
+    justify-content: center;
+    align-self: center;
+    background: silver;
+    padding: 30px 30px;
+    font-size: 18px;
+    margin: 2px 2px;
+    transition-duration: 2s;
+    cursor: pointer;
+    background-color: rgb(238, 224, 224);
+    color: black;
+    border: 3px solid #3d3d3d;
+    border-radius: 6px;
   }
   
-  .container{
-    padding: 25px;
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 30px;
-    background: lightgray;
-    border-radius: 5px;}
-    
-    form {
+  .pokemon-list{
+    list-style-type: none;
+  }
+
+  .footer {                                               /*added a simple footer to check how is the text when resizing*/
+    background-color: rgb(16, 168, 219);
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  button:hover {
+    background: #eff304;
+  }
+
+  
+  #modal-container {
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    overflow: auto;
+    display: none;
+    text-align: center;
+  }
+  
+  #modal-container.is-visible {
+    display: block;
+  }
+  
+  .modal {
+    margin: auto;
     display: inline-block;
-    }
-    
-    input{
-    padding: 4px 15px 4px 5px;
-    }
-    
-    #button{
-    display: inline-block;
-    background-color:red;
-    color:#000000;
-    border-radius: 5px;
-    text-align:center;
-    margin-top:2px;
-    padding: 5px 15px;
-    }
-    
-    #button:hover{
-    cursor: pointer;
-    opacity: .8;}
-    
-    ol {padding-left: 20px;}
-    
-    ol li {padding: 5px;color:#000;}
-    
-    ol li:nth-child(even){background: #dfdfdf;}
-    
-    .strike{text-decoration: line-through;}
-    
-    li:hover{
-      cursor: pointer;
-     }
-    
-    .delete {
-      display: none;
-    }
-    
-    li > crossOutButton {
-      background: none;
-      border: none;
-      float: right;
-      color: #ff0000;
-      font-weight: 800;
-    }
+    box-sizing: border-box;
+    background: yellow;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+  }
+  
+  .modal-close {
+    float: right;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: rgb(90, 90, 90);
+    text-decoration: underline;
+  }
+  
+  .modal h1 {
+    margin-top: 0;
+    color: blue;
+    text-align: left;
+  }
+  
+  .modal p {
+    margin-bottom: 0;
+    color: darkblue;
+    text-align: center;
+  }
+   
