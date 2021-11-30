@@ -1,37 +1,34 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make it work on mobiles too-->  
-    <title>repl.it</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <header>
-    <img src="img/logo.png" width="400px" height="200px" alt="Pokemon's famous logo" claass="page-header_item">
-  </header>
-  
-  <body>
-    <div class="div1">
-      <h1 class="text2">Pokèdex</h1>                
-      <ul class="pokemon-list"></ul>
-      <div id="modal-container"></div>
-      <script src="js/Promise-polyfill.js "></script>
-      <script src="js/Promise-polyfill.min.js"></script>
-      <script src="js/fetch.polyfill.js"></script>
-      <script src="js/script.js"></script>
-    </div>
-  
-    <footer> 
-      <div class="footer">
-        <p>Work in progress... text to check how the content responds to the resizing.</p>
-      </div>
-    </footer>   
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+		<h2>My to Do list</h2>
+		<p><em> Double click to mark an item off, click on "X" to delete an item, and drag items to reorder.</em></p>
+       
+		<form name="toDoList">
+			<input type="text" name="ListItem" id="input"/>
+		</form>
+    
+		<div onclick="newItem()" id="button">Add</div>
+		<br/>
+		<ol id="list"></ol>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
   </body>
 </html>
