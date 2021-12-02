@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make it work on mobiles too-->  
-    <title>repl.it</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokedex - repl.it </title>
+    <!--added CSS Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">    
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,26 +14,78 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
-  
-  <header>
-    <img src="img/logo.png" width="400px" height="200px" alt="Pokemon's famous logo" claass="page-header_item">
-  </header>
-  
-  <body>
-    <div class="div1">
-      <h1 class="text2">Pokèdex</h1>                
-      <ul class="pokemon-list"></ul>
-      <div id="modal-container"></div>
-      <script src="js/Promise-polyfill.js "></script>
-      <script src="js/Promise-polyfill.min.js"></script>
-      <script src="js/fetch.polyfill.js"></script>
-      <script src="js/script.js"></script>
+
+<body>
+<!--new Navbar in Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="https://www.pokemon.com/">
+            <img src="img/logo.png" class="d-inline-block align-top" width="240px" height="80px" alt="Pokemon's famous logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://cicciotazza.github.io/task10-portfolio/">Portfolio</a>
+                </li>
+                <li class="nav-item">   
+                    <a class="nav-link" href="https://cicciotazza.github.io/task10-portfolio/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/cicciotazza/">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://cicciotazza.github.io/task10-portfolio/contact.html">Contact</a>
+                </li>  
+            </ul>
+         
+        </div>
+            <form class="search-pokemon form-inline my-2 my-lg-0">
+                <input class = "form-control mr-sm-2" type = "text" placeholder="Search Pokemon" aria-label="Search" id="filter">
+                <button class="btn btn-secondary" type="submit"> Search </button>
+            </form>
+        </div>
+    </nav>
+
+<!-- load the data-->
+<div id="loading"></div>
+
+<!-- old Pokemon list from JSON -->
+<ul class="pokemon-list">
+</ul>
+
+<!-- new Modal added -->
+<div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>If you are eading this, then modals work fine</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-  
-    <footer> 
-      <div class="footer">
-        <p>Work in progress... text to check how the content responds to the resizing.</p>
-      </div>
-    </footer>   
-  </body>
+</div>
+<footer class="fixed-bottom" >
+    <p> Text to verify if the page is responsive or not</p>
+</footer>
+
+<!--added CDN for dipendency-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="js/Promise-polyfill.js"></script>
+<script src="js/fetch.polyfill.js"></script>
+<script src="js/script.js"></script>
+
+</body>
 </html>

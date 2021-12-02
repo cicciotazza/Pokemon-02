@@ -43,6 +43,13 @@ b) *wrap pokemonList arrain in a IIFE, create a new PokemonRepository, return th
   *Modal and interaction*
   [x]
 
+  **Task10**
+  *Bootstrap utilities*
+  *Dependency*
+  *Navbar with links and toggle*
+  [x]
+
+
 Pokemons list used
 [http](https://www.pokemon.com/us/pokedex/)
 [http](https://pokeapi.co/api/v2/pokemon)
@@ -52,3 +59,4 @@ Pokemons list used
 - CSS
 - Javascript
   
+![Screen tast 10](https:/cicciotazza.github.com/../../img/screen10.jpg)
