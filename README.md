@@ -59,4 +59,4 @@ Pokemons list used
 - CSS
 - Javascript
   
-![Screen tast 10](https:/cicciotazza.github.com/../../img/screen10.jpg)
+![Screen tast 10](https://github.com/cicciotazza/Pokemon-02/blob/main/img/screen10.jpg)
