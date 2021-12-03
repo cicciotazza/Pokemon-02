@@ -1,24 +1,23 @@
-alert("V 1.10 - Click here to check your Pokemon");
-
+alert('V 1.11 - Click here to check your Pokemon');
 
 //IIFE starts function with an Array
 let pokemonRepository = (function () {
   let repository = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
- //check whether or not the iem is a an objet
+  //check whether or not the iem is a an objet
   function add(pokemon) {
-  //if the type of Pokemon has name and detail
+    //if the type of Pokemon has name and detail
     if 
-  //if the type of Pokemon has name and detail
-    (typeof pokemon === "object" &&                          
-    "name" in pokemon &&
-    "detailsUrl" in pokemon
+    //if the type of Pokemon has name and detail
+    (typeof pokemon === 'object' &&                          
+    'name' in pokemon &&
+    'detailsUrl' in pokemon
 ) {
-  //true adds the new item pushing into the repo
+      //true adds the new item pushing into the repo
       repository.push(pokemon);
     } else {
-  //false writes condition
+      //false writes condition
       console.log('Uncorrect - This pokemon is not an object!');
     }
   }
@@ -70,19 +69,19 @@ let pokemonRepository = (function () {
   //load details function 
   function loadList() {
     showLoadingMessage();
-  //promise, fetch the API with the url above
+    //promise, fetch the API with the url above
     return fetch(apiUrl).then(function (response) {
       return response.json();
     }).then(function (json) {
       hideLoadingMessage();
-  //forEach loop, "json" is the array, the "results" come from the url
+      //forEach loop, "json" is the array, the "results" come from the url
       json.results.forEach(function (item) {
-  //pokenon variable into an object with two keys
+        //pokenon variable into an object with two keys
         let pokemon = {
           name: item.name,
           detailsUrl: item.url
         };
-  //comes from the function add(pokemon)
+        //comes from the function add(pokemon)
         add(pokemon);
       });
     }).catch(function (e) {
@@ -94,18 +93,18 @@ let pokemonRepository = (function () {
   //the function takes a parameter which is the "pokemon"
   function loadDetails(pokemon) {
     showLoadingMessage();
-  //each url link for each Pokemon
+    //each url link for each Pokemon
     let url = pokemon.detailsUrl;
     return fetch(url).then(function (response) {
-  //it returns the details from each one of them
+      //it returns the details from each one of them
       return response.json();
     }).then(function(details) {
       hideLoadingMessage();
-   //details added to the item, "sprites" belongs to the url
+      //details added to the item, "sprites" belongs to the url
       pokemon.imageUrl = details.sprites.front_default;
       pokemon.height = details.height;
       pokemon.weight = details.weight;
-//seatching for types which is actually an array
+      //seatching for types which is actually an array
       pokemon.types = details.types;
     }).catch(function(e) {
       hideLoadingMessage();
@@ -154,10 +153,11 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.loadList().then(function() {
-  //Search//
-  document.querySelector('.search-pokemon').addEventListener('submit', function() {
+  //Search
+  document.querySelector('.search-pokemon').addEventListener('submit', function (event) {
+    event.preventDefault();
     let query = document.querySelector('#myInput').value;
-    document.querySelector('.pokemon-list').innerHTML = "";
+    document.querySelector('.pokemon-list').innerHTML = '';
     if (query === '') {
       pokemonRepository.getAll().forEach(function(pokemon) {
         pokemonRepository.addListItem(pokemon);

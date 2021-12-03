@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">    
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-  </head>
+    <link href="dist/minify.css" rel="stylesheet" type="text/css" />
+</head>
 
 <body>
 <!--new Navbar in Bootstrap -->
@@ -39,21 +39,19 @@
                     <a class="nav-link" href="https://cicciotazza.github.io/task10-portfolio/contact.html">Contact</a>
                 </li>  
             </ul>
-         
-        </div>
+    
             <form class="search-pokemon form-inline my-2 my-lg-0">
-                <input class = "form-control mr-sm-2" type = "text" placeholder="Search Pokemon" aria-label="Search" id="filter">
-                <button class="btn btn-secondary" type="submit"> Search </button>
+                <input class="form-control mr-sm-2" id="myInput" type="text" placeholder="Search Pokemon..." aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
 <!-- load the data-->
-<div id="loading"></div>
+<div id="loading"></div>mini
 
-<!-- old Pokemon list from JSON -->
-<ul class="pokemon-list">
-</ul>
+ <!-- old Pokemon list from JSON -->
+<ul class="pokemon-list"></ul>
 
 <!-- new Modal added -->
 <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
@@ -85,7 +83,7 @@
 
 <script src="js/Promise-polyfill.js"></script>
 <script src="js/fetch.polyfill.js"></script>
-<script src="js/script.js"></script>
+<script src="dist/minify.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,24 @@
 # Pokedex
-## Basic JS, objects, array, functions, DOM
+- Load a list of data from an external source (API)
+- View a list of items
+- Details available by clicking
+- 
+## Languages used
+- HTML
+- CSS
+- Javascript
 
+## Creator
+- Github [http](https://github.com/cicciotazza)
+- Linkedin (to be filled)
+
+
+
+
+
+
+**Task01**
+*Basic JS, objects, array, functions, DOM*
 **Task02**
 *Create a new variable called pokemonList*
 *Assign it a blank array*
@@ -49,14 +67,22 @@ b) *wrap pokemonList arrain in a IIFE, create a new PokemonRepository, return th
   *Navbar with links and toggle*
   [x]
 
+  **Task11**
+  *Debug*
+  *ELint*
+  *Prettier*
+  *Minify*
+  [x]
+
 
 Pokemons list used
 [http](https://www.pokemon.com/us/pokedex/)
 [http](https://pokeapi.co/api/v2/pokemon)
 
-##Languages used
-- HTML
-- CSS
-- Javascript
+
   
+<<<<<<< Updated upstream
 ![Screen tast 10](https://github.com/cicciotazza/Pokemon-02/blob/main/img/screen10.jpg)
+=======
+![Screen task 10](https:/cicciotazza.github.com/../../img/screen10.jpg)
+>>>>>>> Stashed changes
