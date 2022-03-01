@@ -1,8 +1,14 @@
 # Pokedex
+
+![screenshot](bg.png) 
+
 - Load a list of data from an external source (API)
-- View a list of items
-- Details available by clicking
+- View a list of hundreds of items
+- Details available by clicking on each Pokemon
  
+## Live version
+[Link](https://cicciotazza.github.io/Pokemon-02/)
+
 ## Languages used
 - HTML
 - CSS
@@ -12,9 +18,16 @@
 -  [Github](https://github.com/cicciotazza)
 - Linkedin (to be filled)
 
-
-
-
+### The Requirments:
+1. The app load data from external API
+1. The app demonstrate the list of the 150 Pokemon
+1. The app shows the details of each Pokemon feature
+1. The app have a styling CSS feature
+1. The JS follow the ESLint rules for fixing errors
+1. The app uses one UI pattern like Modal 
+1. The app should not show any errors
+1. The app will be public in the GitHub deploying
+1. The app works in Chrome, Firefox, Safari and Edge
 
 
 **Task01**
@@ -75,10 +88,6 @@ b) *wrap pokemonList arrain in a IIFE, create a new PokemonRepository, return th
   [x]
 
 
-Pokemons list used
+### Pokemons list used
 - [Pokedex](https://www.pokemon.com/us/pokedex/)
 - [API list](https://pokeapi.co/api/v2/pokemon)
-
-
-  
-![Screen task 10](https://github.com/cicciotazza/Pokemon-02/blob/main/img/screen10.jpg))
